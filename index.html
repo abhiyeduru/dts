@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Team Services - Premium Digital Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Add particles.js for background effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    
+    <!-- Add preload hint for critical theme resources -->
+    <link rel="preload" href="styles.css" as="style">
+    
+    <!-- Prevent flash of unstyled content with theme initialization -->
+    <script>
+        // Initialize theme before DOM loads to prevent flash of wrong theme
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 
+                              (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <!-- Existing stylesheets and other head elements -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#hero">Dream Team Services</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link login-btn" id="login-btn">Login</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <video autoplay muted loop id="hero-video">
+                <source src="" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Digital Presence</h1>
+            <p class="hero-subtitle">Elevate your business with cutting-edge solutions that drive results</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">Get Started</a>
+                <a href="#services" class="cta-button secondary">Explore Services</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services</h2>
+            <p class="section-subtitle">Comprehensive digital solutions tailored to your business needs</p>
+            
+            <div class="service-cards">
+                <div class="service-card" data-level="1">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Stunning Websites & Digital Marketing</h3>
+                    <p>Captivating digital experiences that convert visitors into customers</p>
+                    <a href="#service-1" class="service-link">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-level="2">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Software & Mobile Applications</h3>
+                    <p>Powerful, intuitive applications that solve real-world problems</p>
+                    <a href="#service-2" class="service-link">Learn More</a>
+                </div>
+                
+                <div class="service-card" data-level="3">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Solutions & Cyber Security</h3>
+                    <p>Cutting-edge intelligence and robust protection for your digital assets</p>
+                    <a href="#service-3" class="service-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Level One -->
+    <section id="service-1" class="service-detail">
+        <div class="parallax-background" data-parallax-speed="0.5">
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <div class="service-content">
+                <h2 class="animate-on-scroll">Stunning Websites & Digital Marketing</h2>
+                <div class="service-description animate-on-scroll">
+                    <p>We create visually stunning, high-performing websites that captivate your audience and drive conversions. Our comprehensive digital marketing strategies ensure your brand reaches the right people at the right time.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                            <div class="feature-content">
+                                <h4>Premium Web Design</h4>
+                                <p>Custom-crafted websites with cutting-edge design and seamless functionality</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="feature-content">
+                                <h4>Results-Driven SEO</h4>
+                                <p>Data-backed strategies that improve visibility and organic traffic</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+                            <div class="feature-content">
+                                <h4>Strategic Digital Marketing</h4>
+                                <p>Comprehensive campaigns that enhance brand awareness and drive engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-cta animate-on-scroll">
+                    <a href="#contact" class="cta-button">Start Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Level Two -->
+    <section id="service-2" class="service-detail">
+        <div class="parallax-background" data-parallax-speed="0.5">
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <div class="service-content">
+                <h2 class="animate-on-scroll">Software & Mobile Applications</h2>
+                <div class="service-description animate-on-scroll">
+                    <p>We develop powerful, user-friendly software and mobile applications that solve complex problems and enhance operational efficiency. Our solutions are built with scalability and performance in mind.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-code"></i></div>
+                            <div class="feature-content">
+                                <h4>Custom Software Development</h4>
+                                <p>Tailor-made software solutions that address your unique business challenges</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="feature-content">
+                                <h4>Intuitive Mobile Apps</h4>
+                                <p>Cross-platform applications with seamless user experiences and robust functionality</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="feature-content">
+                                <h4>Cloud Solutions</h4>
+                                <p>Scalable, secure cloud infrastructure that grows with your business</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-cta animate-on-scroll">
+                    <a href="#contact" class="cta-button">Discuss Your Requirements</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Level Three -->
+    <section id="service-3" class="service-detail">
+        <div class="parallax-background" data-parallax-speed="0.5">
+            <div class="overlay"></div>
+        </div>
+        <div class="container">
+            <div class="service-content">
+                <h2 class="animate-on-scroll">AI Solutions & Cyber Security</h2>
+                <div class="service-description animate-on-scroll">
+                    <p>We leverage cutting-edge artificial intelligence and robust security measures to protect your digital assets and optimize your business processes. Our solutions are designed to keep you ahead of the curve.</p>
+                    
+                    <div class="service-features">
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                            <div class="feature-content">
+                                <h4>AI Integration</h4>
+                                <p>Advanced machine learning and AI solutions that drive automation and insights</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="feature-content">
+                                <h4>Comprehensive Security</h4>
+                                <p>Multi-layered security protocols that safeguard your digital infrastructure</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                            <div class="feature-content">
+                                <h4>Intelligent Automation</h4>
+                                <p>Smart workflows and process automation that enhance efficiency and productivity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-cta animate-on-scroll">
+                    <a href="#contact" class="cta-button">Explore AI Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="animate-on-scroll">About Dream Team Services</h2>
+                    <p class="animate-on-scroll">We are a team of passionate digital experts dedicated to transforming businesses through innovative technology solutions. With a focus on excellence and customer satisfaction, we deliver premium digital services that help our clients thrive in the digital landscape.</p>
+                    <p class="animate-on-scroll">Our mission is to empower businesses with cutting-edge technology solutions that drive growth, enhance efficiency, and create exceptional digital experiences.</p>
+                    <div class="stats-container animate-on-scroll">
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="250">0</span>+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="125">0</span>+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3><span class="counter" data-target="15">0</span>+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image animate-on-scroll">
+                    <div class="image-container">
+                        <img src="./dts.jpg" alt="Dream Team Services Team" id="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Dream Team Services transformed our digital presence completely. Their attention to detail and commitment to excellence is unmatched."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="" alt="Client Avatar" id="testimonial-img-1">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO, Innovative Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The AI solutions provided by Dream Team Services have revolutionized our business processes, saving us time and resources while improving results."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="" alt="Client Avatar" id="testimonial-img-2">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Rodriguez</h4>
+                                <p>CTO, TechForward</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The mobile application developed by Dream Team Services exceeded our expectations in terms of functionality, design, and user experience."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="" alt="Client Avatar" id="testimonial-img-3">
+                            </div>
+                            <div class="author-info">
+                                <h4>Emily Chen</h4>
+                                <p>Product Manager, NextGen Apps</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="control-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="control-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <p class="section-subtitle animate-on-scroll">Let's discuss how we can transform your digital presence</p>
+            
+            <div class="contact-content">
+                <div class="contact-form-container animate-on-scroll">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interest</label>
+                            <select id="service" name="service">
+                                <option value="web-digital">Websites & Digital Marketing</option>
+                                <option value="software-mobile">Software & Mobile Applications</option>
+                                <option value="ai-security">AI Solutions & Cyber Security</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div id="form-success" class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Thank you! Your message has been sent successfully.</p>
+                    </div>
+                    <div id="form-error" class="form-error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>Oops! Something went wrong. Please try again.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info animate-on-scroll">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>123 Innovation Drive, Tech City, CA 90210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>info@dreamteamservices.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h4>Connect With Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Dream Team Services</h3>
+                    <p>Premium digital solutions for forward-thinking businesses</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#service-1">Web Design</a></li>
+                            <li><a href="#service-1">Digital Marketing</a></li>
+                            <li><a href="#service-2">Software Development</a></li>
+                            <li><a href="#service-3">AI Solutions</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dream Team Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Login/Signup -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="signup">Sign Up</button>
+            </div>
+            
+            <div id="login-form" class="auth-form active">
+                <h3>Welcome Back</h3>
+                <form id="firebase-login">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="auth-btn">Login</button>
+                </form>
+            </div>
+            
+            <div id="signup-form" class="auth-form">
+                <h3>Create Account</h3>
+                <form id="firebase-signup">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" required>
+                    </div>
+                    <button type="submit" class="auth-btn">Sign Up</button>
+                </form>
+            </div>
+            
+            <div class="auth-social">
+                <p>Or continue with</p>
+                <div class="social-auth-btns">
+                    <button class="google-auth-btn">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.4/cloudinary-core-shrinkwrap.min.js"></script>
+    <!-- Add GSAP plugins for more animation capabilities -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/MotionPathPlugin.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
