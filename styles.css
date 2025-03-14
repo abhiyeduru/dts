@@ -187,6 +187,13 @@ a:hover {
     margin-left: 1.5rem;
     z-index: 1001;
     transition: all var(--transition-medium);
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+    animation: pulsate 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulsate {
+    0% { box-shadow: 0 0 10px rgba(0, 102, 255, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(0, 102, 255, 0.8), 0 0 30px rgba(0, 102, 255, 0.4); }
 }
 
 .theme-toggle::before {
@@ -203,12 +210,8 @@ a:hover {
 }
 
 .theme-toggle:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.theme-toggle:hover::before {
-    opacity: 1;
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.8), 0 0 30px rgba(0, 102, 255, 0.5);
 }
 
 .theme-toggle i {
@@ -241,9 +244,16 @@ a:hover {
 /* Make theme toggle more visible in mobile view */
 @media screen and (max-width: 992px) {
     .theme-toggle {
-        position: absolute;
+        position: fixed;
         top: 2rem;
-        right: 7rem; /* Position it to the left of the hamburger menu */
+        right: 8rem;
+        z-index: 1002; /* Higher than other elements */
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    .theme-toggle i {
+        font-size: 2.2rem;
     }
     
     #navbar.scrolled .theme-toggle {
